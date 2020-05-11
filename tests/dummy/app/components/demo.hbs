@@ -1,0 +1,25 @@
+<Showcase as |showcase|>
+  <div>
+    {{#each showcase.state.snippets as |snippet|}}
+      <button
+        type="button"
+        {{on "click" (fn showcase.actions.activateSnippet snippet)}}
+      >
+        {{snippet.title}}
+      </button>
+    {{/each}}
+  </div>
+  <div>
+    {{yield (hash
+      ui=(hash
+        useSnippet=showcase.ui.useSnippet
+      )
+    )}}
+  </div>
+  {{#if showcase.state.activeSnippet}}
+    <showcase.ui.snippet
+      @name={{showcase.state.activeSnippet.name}}
+      @language={{showcase.state.activeSnippet.language}}
+    />
+  {{/if}}
+</Showcase>

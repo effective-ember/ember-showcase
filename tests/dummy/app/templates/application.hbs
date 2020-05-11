@@ -1,3 +1,14 @@
-<h2 id="title">Welcome to Ember</h2>
+<h2 id="title">ember-showcase</h2>
+<p>A set of primitives to showcase interactive code examples</p>
 
-{{outlet}}
+{{!-- BEGIN-SNIPPET demo-usage --}}
+<Demo as |demo|>
+  {{!-- BEGIN-SNIPPET hello-world--}}
+  <div>
+    Hello world!
+  </div>
+  {{!-- END-SNIPPET --}}
+  <demo.ui.useSnippet @name="demo-usage.hbs" @language="html" />
+  <demo.ui.useSnippet @name="hello-world.hbs" @title="template.hbs" @language="html" />
+</Demo>
+{{!-- END-SNIPPET --}}
