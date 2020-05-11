@@ -55,6 +55,7 @@ module.exports = {
         {},
         require("eslint-plugin-node").configs.recommended.rules,
         {
+          "@typescript-eslint/no-var-requires": "off",
           // add your custom rules and overrides for node files here
         }
       ),

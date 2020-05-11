@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-empty-function */
 import EmberRouter from "@ember/routing/router";
 import config from "./config/environment";
 
