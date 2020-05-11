@@ -10,7 +10,7 @@ module.exports = {
       legacyDecorators: true,
     },
   },
-  plugins: ["ember"],
+  plugins: ["ember", "eslint-plugin-import-helpers"],
   extends: [
     "eslint:recommended",
     "plugin:ember/recommended",
@@ -23,6 +23,32 @@ module.exports = {
   },
   rules: {
     "ember/no-jquery": "error",
+    "import-helpers/order-imports": [
+      "error",
+      {
+        newlinesBetween: "always",
+        groups: [
+          // builtin | external | internal
+          ["module"],
+
+          // Testing modules
+          [
+            "/^qunit/",
+            "/^ember-qunit/",
+            "/^@ember/test-helpers/",
+            "/^ember-exam/",
+          ],
+
+          // Ember.js modules
+          ["/^ember$/", "/^@ember/", "/^ember-data/"],
+          ["/^ember-/"],
+          ["absolute"],
+          [`/^${require("./package.json").name}\\//`],
+          ["parent", "sibling", "index"],
+        ],
+        alphabetize: { order: "asc", ignoreCase: true },
+      },
+    ],
   },
   overrides: [
     // node files
