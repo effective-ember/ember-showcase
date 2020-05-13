@@ -1,7 +1,7 @@
 ember-showcase
 ==============================================================================
 
-[Short description of the addon.]
+An opinionated set of components to showcase interactive code samples.
 
 
 Compatibility
