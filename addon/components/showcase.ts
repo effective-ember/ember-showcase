@@ -15,7 +15,7 @@ export type Snippet = {
   language: string;
 };
 
-export default class Demo extends Component {
+export default class Showcase extends Component {
   @tracked snippets: Snippet[] = [];
   @tracked activeSnippet: Snippet | null = null;
 
