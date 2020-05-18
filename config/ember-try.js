@@ -8,14 +8,6 @@ module.exports = async function () {
     useYarn: true,
     scenarios: [
       {
-        name: "ember-3.15", // First Octane release
-        npm: {
-          devDependencies: {
-            "ember-source": "~3.15.0",
-          },
-        },
-      },
-      {
         name: "ember-lts-3.16",
         npm: {
           devDependencies: {
