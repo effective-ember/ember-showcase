@@ -66,10 +66,13 @@ Here's how you will be able to use it:
 
 <!-- BEGIN-SNIPPET demo-usage -->
 <Demo as |demo|>
+  <!-- BEGIN-SNIPPET code-snippet -->
   <div>
     Hello world!
   </div>
+  <!-- END-SNIPPET -->
   <demo.ui.useSnippet @name="demo-usage.md" @title="template.hbs" @language="html" />
+  <demo.ui.useSnippet @name="code-snippet.md" @title="snippet-usage" @language="html" />
 </Demo>
 <!-- END-SNIPPET -->
 

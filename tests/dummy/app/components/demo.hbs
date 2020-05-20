@@ -1,27 +1,35 @@
 {{!--  BEGIN-SNIPPET demo  --}}
 <Showcase as |showcase|>
-  <div>
-    {{#each showcase.state.snippets as |snippet|}}
-      <button
-        type="button"
-        {{on "click" (fn showcase.actions.activateSnippet snippet)}}
-      >
-        {{snippet.title}}
-      </button>
-    {{/each}}
+  <div class="mt-6 mb-4 border border-gray-300 rounded-md">
+    <div class="p-4">
+      {{yield (hash
+        ui=(hash
+          useSnippet=showcase.ui.useSnippet
+        )
+      )}}
+    </div>
+    <div class="bg-gray-300">
+      <div class="flex px-4 py-2">
+        {{#each showcase.state.snippets as |snippet|}}
+          <button
+            type="button"
+            class="
+              mr-4 -ml-2 focus:outline-none
+              {{if (eq snippet showcase.state.activeSnippet) "font-semibold"}}
+            "
+            {{on "click" (fn showcase.actions.activateSnippet snippet)}}
+          >
+            {{snippet.title}}
+          </button>
+        {{/each}}
+      </div>
+      {{#if showcase.state.activeSnippet}}
+        <showcase.ui.snippet
+          @name={{showcase.state.activeSnippet.name}}
+          @language={{showcase.state.activeSnippet.language}}
+        />
+      {{/if}}
+    </div>
   </div>
-  <div>
-    {{yield (hash
-      ui=(hash
-        useSnippet=showcase.ui.useSnippet
-      )
-    )}}
-  </div>
-  {{#if showcase.state.activeSnippet}}
-    <showcase.ui.snippet
-      @name={{showcase.state.activeSnippet.name}}
-      @language={{showcase.state.activeSnippet.language}}
-    />
-  {{/if}}
 </Showcase>
 {{!--  END-SNIPPET  --}}
