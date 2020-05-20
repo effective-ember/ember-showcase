@@ -8,6 +8,33 @@ module.exports = function (defaults) {
     // Add options here
     snippetPaths: ["tests/dummy/app/snippets"],
     snippetSearchPaths: ["tests/dummy"],
+    "markdown-it-templates": {
+      options: {
+        linkify: true,
+        html: true,
+        typographer: true,
+      },
+      format(content) {
+        return `
+          <div class="container mx-auto">
+            ${content.html}
+          </div>
+          `;
+      },
+    },
+    postcssOptions: {
+      compile: {
+        plugins: [
+          {
+            module: require("postcss-import"),
+            options: {
+              path: ["node_modules"],
+            },
+          },
+          require("tailwindcss")("./tailwind.config.js"),
+        ],
+      },
+    },
   });
 
   /*

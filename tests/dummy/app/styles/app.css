@@ -1,0 +1,41 @@
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";
+
+.md-docs h2 {
+  @apply mt-4;
+  @apply mb-2;
+  @apply leading-6;
+  @apply font-semibold;
+}
+
+.md-docs h3 {
+  @apply mt-2;
+  @apply mb-1;
+  @apply font-semibold;
+  @apply text-sm;
+}
+
+.md-docs ul {
+  @apply mt-2;
+  @apply mb-1;
+
+  @apply pl-2;
+}
+
+.md-docs a {
+  @apply text-gray-600;
+  @apply underline;
+}
+
+.md-docs p {
+  @apply mt-1;
+}
+
+.md-docs p > code, li > code {
+  @apply bg-gray-200;
+  @apply px-1;
+  @apply rounded-sm;
+}

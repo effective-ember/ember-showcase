@@ -1,8 +1,23 @@
-## ember-showcase
+<div class="flex items-center justify-between px-4 py-2 bg-white border-b border-gray-200 sm:py-4 sm:items-baseline"
+>
+  <div class="flex items-center justify-between w-full">
+    <div>
+      <h1 class="text-base font-semibold leading-6 font-regular md:text-lg">
+        ember-showcase
+      </h1>
+      <div class="flex-shrink-0 text-xs text-gray-500 sm:text-sm">
+        Primitives to showcase interactive code samples
+      </div>
+    </div>
+    <div>
+      <div>Github</div>
+    </div>
+  </div>
+</div>
 
-A set of primitives to showcase interactive code examples
+<div class="p-4 md-docs">
 
-### How to use
+## How to use
 
 `ember-showcase` is an addon that provides you with component abstractions
 that you can build upon to showcase interactive code-samples in your
@@ -16,9 +31,9 @@ abstraction on top of it you can style it as you see fit. The follwing guide
 walks you through the existing components in `ember-showcase` and how you could
 create your own component abstraction on top of it.
 
-### Components
+## Components
 
-#### Showcase
+### Showcase
 
 The `Showcase`-component is a provider component that yields out everything you
 need to build your own interactive code sample component.
@@ -37,7 +52,7 @@ need to build your own interactive code sample component.
   * `registerSnippet` - an action to register a code snippet on the `Showcase`
   * `activateSnippet` - an action to switch out the currently active snippet
 
-### Example
+## Example
 
 In this example we will walk you through creating your own `Demo`-component
 that is based on `ember-showcase`. `Demo` will be able to show an interactive
@@ -62,3 +77,11 @@ And here's how you would use `ember-showcase` to implement `Demo`:
 
 <Snippet @name="demo.hbs" @language="html" />
 
+</div>
+<div
+  class="px-4 py-8 pt-8 mt-12 border-t border-gray-200 lg:py-16"
+>
+  <div class="text-base text-gray-400 leading-6 xl:text-center">
+    © 2020 <a href="https://www.effective-ember.com" class="underline">Effective-Ember</a>.
+  </div>
+</div>
