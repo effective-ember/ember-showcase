@@ -41,6 +41,10 @@ module.exports = function (defaults) {
       components: ["markup", "bash", "shell-session"],
       plugins: ["line-numbers"],
     },
+
+    prember: {
+      urls: ["/"],
+    },
   });
 
   /*
