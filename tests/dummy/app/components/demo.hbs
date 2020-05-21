@@ -1,21 +1,23 @@
 {{!--  BEGIN-SNIPPET demo  --}}
 <Showcase as |showcase|>
-  <div class="mt-6 mb-4 border border-gray-300 rounded-md">
-    <div class="p-4">
+  <div class="mt-6 mb-4 border border-gray-300 rounded-md showcase">
+    <div class="p-4 bg-white">
       {{yield (hash
         ui=(hash
           useSnippet=showcase.ui.useSnippet
         )
       )}}
     </div>
-    <div class="bg-gray-300">
-      <div class="flex px-4 py-2">
+    <div class="bg-prism-tomorrow-bg rounded-b-md">
+      <div class="flex px-4 py-2 border-b border-prism-tomorrow-comment-gray">
         {{#each showcase.state.snippets as |snippet|}}
           <button
             type="button"
             class="
               mr-4 -ml-2 focus:outline-none
-              {{if (eq snippet showcase.state.activeSnippet) "font-semibold"}}
+              {{if (eq snippet showcase.state.activeSnippet)
+                "text-gray-300" "text-prism-tomorrow-comment-gray"
+              }}
             "
             {{on "click" (fn showcase.actions.activateSnippet snippet)}}
           >
@@ -27,6 +29,7 @@
         <showcase.ui.snippet
           @name={{showcase.state.activeSnippet.name}}
           @language={{showcase.state.activeSnippet.language}}
+          class="m-0 rounded-b-md"
         />
       {{/if}}
     </div>

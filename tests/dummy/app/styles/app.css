@@ -31,11 +31,15 @@
 }
 
 .md-docs p {
-  @apply mt-1;
+  @apply mt-3;
 }
 
 .md-docs p > code, li > code {
   @apply bg-gray-200;
   @apply px-1;
   @apply rounded-sm;
+}
+
+.showcase pre {
+  @apply m-0;
 }

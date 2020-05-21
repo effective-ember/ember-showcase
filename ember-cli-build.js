@@ -35,6 +35,12 @@ module.exports = function (defaults) {
         ],
       },
     },
+
+    "ember-prism": {
+      theme: "tomorrow",
+      components: ["markup", "bash", "shell-session"],
+      plugins: ["line-numbers"],
+    },
   });
 
   /*

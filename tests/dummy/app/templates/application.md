@@ -17,6 +17,13 @@
 
 <div class="p-4 md-docs">
 
+
+## How to install
+
+To install `ember-showcase` use the regular `ember-cli`-command to install an addon:
+
+<Snippet @name="install-ember-showcase.sh" @language="shell-session"/>
+
 ## How to use
 
 `ember-showcase` is an addon that provides you with component abstractions
@@ -26,10 +33,13 @@ applications.
 This can be useful for documenting an addon, a styleguide or when writing
 a blog.
 
-`ember-showcase` comes with no styling. As it is meant as a base for your own
-abstraction on top of it you can style it as you see fit. The follwing guide
-walks you through the existing components in `ember-showcase` and how you could
-create your own component abstraction on top of it.
+`ember-showcase` comes with no styling - the component it provides are not
+meant to to be used as they come. The bundled componens of `ember-showcase` are
+primitives that you will use to build your own component abstraction for
+displaying interactive code samples that you style to your liking.
+
+The following guide walks you through the existing components in `ember-showcase`
+and how you can use it to  create your own component abstraction on top of it.
 
 ## Components
 
@@ -38,7 +48,7 @@ create your own component abstraction on top of it.
 The `Showcase`-component is a provider component that yields out everything you
 need to build your own interactive code sample component.
 
-`Showcase` yields a nested hash that holds the following properties:
+`Showcase` - yields a nested hash that holds the following properties:
 
 * `ui` - a set of declarative components
   * `useSnippet` - a component that you use to register snippets to the `Showcase`
@@ -52,6 +62,10 @@ need to build your own interactive code sample component.
   * `registerSnippet` - an action to register a code snippet on the `Showcase`
   * `activateSnippet` - an action to switch out the currently active snippet
 
+### Snippet
+The `Snippet`-component is a component that you can use to render code-snippets registered via
+[ember-code-snippets](https://github.com/ef4/ember-code-snippet). Highlighting
+code snippets is handled via [ember-prism](https://github.com/shipshapecode/ember-prism).
 ## Example
 
 In this example we will walk you through creating your own `Demo`-component
@@ -60,9 +74,16 @@ code sample - i.e. an ui that shows the code to demo in action. You will also
 be able to attach an optional set of code-snippets (based on
 [ember-code-snippet](https://github.com/ef4/ember-code-snippet)) that you can
 toggle between to show other developers how the component you are demoing will
-be used in code.
+be used in code. Code highlighting is based on
+[ember-prism](https://github.com/shipshapecode/ember-prism) if you want to customize the theme used in code snippets please configure `ember-prism` accordingly.
 
-Here's how you will be able to use it:
+This guide is customizing `ember-prism` in the following way for example:
+
+<Snippet @name="prism.js" @title="ember-cli-build.js" />
+
+### `Demo`-Usage
+
+Here's how you will be able to use the `Demo` component:
 
 <!-- BEGIN-SNIPPET demo-usage -->
 <Demo as |demo|>
@@ -76,7 +97,11 @@ Here's how you will be able to use it:
 </Demo>
 <!-- END-SNIPPET -->
 
-And here's how you would use `ember-showcase` to implement `Demo`:
+### Implementing `Demo`
+And here's how you would use `ember-showcase` to implement `Demo` - you don't
+need to do more than create your own component wrapper that uses `Showcase`
+internally - the example uses [tailwindcss](https://tailwindcss.com/) for
+styling but you can use whatever CSS authoring method you are comfortable with:
 
 <Snippet @name="demo.hbs" @language="html" />
 
