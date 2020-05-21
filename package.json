@@ -95,7 +95,7 @@
   },
   "ember-addon": {
     "configPath": "tests/dummy/config",
-    "demoURL": "http://effective-ember.github.io/ember-showcase"
+    "demoURL": "https://ember-showcase.effective-ember.com"
   },
   "release-it": {
     "git": {

@@ -44,7 +44,6 @@ module.exports = function (environment) {
   }
 
   if (environment === "production") {
-    ENV.rootURL = "/ember-showcase";
     ENV.locationType = "hash";
   }
 
