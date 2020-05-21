@@ -12,7 +12,7 @@
 }
 
 .md-docs h3 {
-  @apply mt-2;
+  @apply mt-4;
   @apply mb-1;
   @apply font-semibold;
   @apply text-sm;
@@ -26,7 +26,7 @@
 }
 
 .md-docs a {
-  @apply text-gray-600;
+  @apply text-ember;
   @apply underline;
 }
 
@@ -34,7 +34,7 @@
   @apply mt-3;
 }
 
-.md-docs p > code, li > code {
+.md-docs h3 > code, p > code, li > code {
   @apply bg-gray-200;
   @apply px-1;
   @apply rounded-sm;

@@ -6,6 +6,7 @@ module.exports = {
       colors: {
         "prism-tomorrow-bg": "#2d2d2d",
         "prism-tomorrow-comment-gray": "#999",
+        ember: "#d14735",
       },
     },
   },

@@ -2,16 +2,22 @@
 >
   <div class="flex items-center justify-between w-full">
     <div>
-      <h1 class="text-base font-semibold leading-6 font-regular md:text-lg">
-        ember-showcase
+      <h1
+        title="ember-showcase"
+        class="flex items-baseline text-base font-semibold leading-6 font-regular md:text-lg"
+      >
+        <span class="mr-1">{{svg-jar "ember"}}</span>showcase
       </h1>
       <div class="flex-shrink-0 text-xs text-gray-500 sm:text-sm">
         Primitives to showcase interactive code samples
       </div>
     </div>
-    <div>
-      <div>Github</div>
-    </div>
+    <a
+      class="text-black cursor-pointer sm:text-gray-500 hover:text-black"
+      href="https://github.com/effective-ember/ember-showcase"
+    >
+      {{svg-jar "github" width="32px" height="32px" class="fill-current"}}
+    </a>
   </div>
 </div>
 
@@ -26,17 +32,18 @@ To install `ember-showcase` use the regular `ember-cli`-command to install an ad
 
 ## How to use
 
-`ember-showcase` is an addon that provides you with component abstractions
-that you can build upon to showcase interactive code-samples in your
+`ember-showcase` is an addon that provides you with <span class="underline">component abstractions
+that you can build upon</span> to showcase interactive code-samples in your
 applications.
 
-This can be useful for documenting an addon, a styleguide or when writing
-a blog.
+This can be useful for <span class="underline">documenting an addon, a styleguide or when writing
+a blog</span>.
 
-`ember-showcase` comes with no styling - the component it provides are not
-meant to to be used as they come. The bundled componens of `ember-showcase` are
-primitives that you will use to build your own component abstraction for
-displaying interactive code samples that you style to your liking.
+`ember-showcase` comes with <span class="underline">no styling</span> - the
+components it provides are not meant to to be used as they come. The bundled
+components of `ember-showcase` are primitives that you will use to build your
+own component abstraction for displaying interactive code samples that you
+style to your liking.
 
 The following guide walks you through the existing components in `ember-showcase`
 and how you can use it to  create your own component abstraction on top of it.
@@ -64,8 +71,9 @@ need to build your own interactive code sample component.
 
 ### Snippet
 The `Snippet`-component is a component that you can use to render code-snippets registered via
-[ember-code-snippets](https://github.com/ef4/ember-code-snippet). Highlighting
-code snippets is handled via [ember-prism](https://github.com/shipshapecode/ember-prism).
+[ember-code-snippets](https://github.com/ef4/ember-code-snippet).
+
+Highlighting code snippets is done via [ember-prism](https://github.com/shipshapecode/ember-prism).
 ## Example
 
 In this example we will walk you through creating your own `Demo`-component
@@ -109,7 +117,7 @@ styling but you can use whatever CSS authoring method you are comfortable with:
 <div
   class="px-4 py-8 pt-8 mt-12 border-t border-gray-200 lg:py-16"
 >
-  <div class="text-base text-gray-400 leading-6 xl:text-center">
+  <div class="text-base text-gray-500 leading-6 xl:text-center">
     © 2020 <a href="https://www.effective-ember.com" class="underline">Effective-Ember</a>.
   </div>
 </div>
