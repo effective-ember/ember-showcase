@@ -152,7 +152,9 @@ need to do more than create your own component wrapper that uses `Showcase`
 internally - the example uses [tailwindcss](https://tailwindcss.com/) for
 styling but you can use whatever CSS authoring method you are comfortable with:
 
-<Snippet @name="demo.hbs" @language="html" />
+<Demo @onlySnippets={{true}} as |demo|>
+  <demo.ui.useSnippet @name="demo.hbs" @title="<your-app>/app/components/demo.hbs" @language="html" />
+</Demo>
 
 </div>
 <div
