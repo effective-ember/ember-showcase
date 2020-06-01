@@ -22,6 +22,46 @@
 
 <div class="p-4 md-docs">
 
+## What is this?
+
+`ember-showcase` allows you to showcase the usage of your components by
+rendering the component with accompanying code snippets to show how the
+component is configured. Say you have a `<Greeting @name="..." />` component
+and want to showcase its usage by demonstrating the possible arguments.
+`ember-showcase` allows you do that with an output like the following:
+
+<!-- BEGIN-SNIPPET intro-usage -->
+<Demo as |demo|>
+  <!-- BEGIN-SNIPPET greeting-usage -->
+  <div class="mb-2">
+    The <code class="font-bold">&lt;Greeting @name /&gt;</code> component renders a
+    greeting (optionally uppercase) for the passed in <code class="font-bold">@name</code> argument.
+  </div>
+
+  <div>
+    <label>
+      <Input @type="checkbox" @checked={{this.uppercase}} />
+      uppercase?
+    </label>
+  </div>
+  <div class="mb-4">
+    <label>
+      Name:
+      <Input @placeholder="Enter your name" @value={{this.name}} class="border border-black" />
+    </label>
+  </div>
+
+  <div class="border p-4">
+    <Greeting @uppercase={{this.uppercase}} @name={{this.name}} />
+  </div>
+  <!-- END-SNIPPET -->
+
+  <demo.ui.useSnippet @name="greeting-usage.md" @title="greeting-usage.hbs" @language="html" />
+  <demo.ui.useSnippet @name="greeting-template.hbs" @title="components/greeting.hbs" @language="html" />
+  <demo.ui.useSnippet @name="greeting-component.js" @title="components/greeting.js" @language="js" />
+  <demo.ui.useSnippet @name="intro-usage.md" @title="&nbsp; &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp; template for this showcase" @language="html" />
+</Demo>
+<!-- END-SNIPPET -->
 
 ## How to install
 
