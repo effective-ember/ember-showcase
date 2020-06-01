@@ -78,7 +78,7 @@ applications.
 This can be useful for <span class="underline">documenting an addon, a styleguide or when writing
 a blog</span>.
 
-`ember-showcase` comes with <span class="underline">no styling</span> - the
+`ember-showcase` comes with <span class="underline font-bold">no styling</span> - the
 components it provides are not meant to to be used as they come. The bundled
 components of `ember-showcase` are primitives that you will use to build your
 own component abstraction for displaying interactive code samples that you
