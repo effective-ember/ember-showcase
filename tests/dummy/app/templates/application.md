@@ -126,7 +126,9 @@ be used in code. Code highlighting is based on
 
 This guide is customizing `ember-prism` in the following way for example:
 
-<Snippet @name="prism.js" @title="ember-cli-build.js" />
+<Demo @onlySnippets={{true}} as |demo|>
+  <demo.ui.useSnippet @name="prism.js" @title="ember-cli-build.js" />
+</Demo>
 
 ### `Demo`-Usage
 
