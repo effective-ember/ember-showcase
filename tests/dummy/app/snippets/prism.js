@@ -1,4 +1,3 @@
-// ember-cli-build.js
 module.exports = function (defaults) {
   const app = new EmberAddon(defaults, {
     // ...
