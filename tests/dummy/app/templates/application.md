@@ -130,6 +130,16 @@ This guide is customizing `ember-prism` in the following way for example:
   <demo.ui.useSnippet @name="prism.js" @title="ember-cli-build.js" />
 </Demo>
 
+### Implementing `Demo`
+And here's how you would use `ember-showcase` to implement `Demo` - you don't
+need to do more than create your own component wrapper that uses `Showcase`
+internally - the example uses [tailwindcss](https://tailwindcss.com/) for
+styling but you can use whatever CSS authoring method you are comfortable with:
+
+<Demo @onlySnippets={{true}} as |demo|>
+  <demo.ui.useSnippet @name="demo.hbs" @title="<your-app>/app/components/demo.hbs" @language="html" />
+</Demo>
+
 ### `Demo`-Usage
 
 Here's how you will be able to use the `Demo` component:
@@ -145,16 +155,6 @@ Here's how you will be able to use the `Demo` component:
   <demo.ui.useSnippet @name="code-snippet.md" @title="snippet-usage" @language="html" />
 </Demo>
 <!-- END-SNIPPET -->
-
-### Implementing `Demo`
-And here's how you would use `ember-showcase` to implement `Demo` - you don't
-need to do more than create your own component wrapper that uses `Showcase`
-internally - the example uses [tailwindcss](https://tailwindcss.com/) for
-styling but you can use whatever CSS authoring method you are comfortable with:
-
-<Demo @onlySnippets={{true}} as |demo|>
-  <demo.ui.useSnippet @name="demo.hbs" @title="<your-app>/app/components/demo.hbs" @language="html" />
-</Demo>
 
 </div>
 <div
