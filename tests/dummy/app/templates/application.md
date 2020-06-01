@@ -1,5 +1,4 @@
-<div class="flex items-center justify-between px-4 py-2 bg-white border-b border-gray-200 sm:py-4 sm:items-baseline"
->
+<div class="flex items-center justify-between px-4 py-2 bg-white border-b border-gray-200 sm:py-4 sm:items-baseline">
   <div class="flex items-center justify-between w-full">
     <div>
       <h1
