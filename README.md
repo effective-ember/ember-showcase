@@ -47,7 +47,7 @@ need to build your own interactive code sample component.
 * `ui` - a set of declarative components
   * `useSnippet` - a component that you use to register snippets to the `Showcase`
   * `snippet` - a component that renders a code snippet
-* `state `- state of the `Showcase` you can use to build your own code sample
+* `state` - state of the `Showcase` you can use to build your own code sample
   abstraction
   * `activeSnippet` - the currently active code snippet of all all the registered
     snippets. By default this will be the first registered snippet
