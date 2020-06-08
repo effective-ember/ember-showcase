@@ -31,7 +31,7 @@ and want to showcase its usage by demonstrating the possible arguments.
 `ember-showcase` allows you do that with an output like the following:
 
 <!-- BEGIN-SNIPPET intro-usage -->
-<Demo as |demo|>
+<Demo data-test-first-demo as |demo|>
   <!-- BEGIN-SNIPPET greeting-usage -->
   <div class="mb-2">
     The <code class="font-bold">&lt;Greeting @name /&gt;</code> component renders a

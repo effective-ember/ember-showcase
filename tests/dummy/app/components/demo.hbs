@@ -1,6 +1,6 @@
 {{!--  BEGIN-SNIPPET demo  --}}
 <Showcase as |showcase|>
-  <div class="mt-6 mb-4 border border-gray-300 rounded-md overflow-hidden showcase">
+  <div class="mt-6 mb-4 border border-gray-300 rounded-md overflow-hidden showcase" ...attributes>
     <div class="{{unless @onlySnippets "p-4 bg-white"}}">
       {{yield (hash
         ui=(hash
@@ -20,6 +20,7 @@
               }}
             "
             {{on "click" (fn showcase.actions.activateSnippet snippet)}}
+            data-test-activate-snippet="{{snippet.name}}"
           >
             {{snippet.title}}
           </button>
