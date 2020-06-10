@@ -3,6 +3,8 @@ ember-showcase [![Build Status](https://travis-ci.org/effective-ember/ember-show
 
 A set of primitives to showcase interactive code examples
 
+[![le demonstration a la gif](demo.gif)](https://ember-showcase.effective-ember.com)
+
 
 Compatibility
 ------------------------------------------------------------------------------
