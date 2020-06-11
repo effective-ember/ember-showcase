@@ -35,9 +35,64 @@
   </div>
 </div>
 <div class="p-4 md-docs">
+<h2>What is this?</h2>
+<p><code>ember-showcase</code> allows you to showcase the usage of your components by
+rendering the component with accompanying code snippets to show how the
+component is configured. Say you have a <code>&lt;Greeting @name="..." /&gt;</code> component
+and want to showcase its usage by demonstrating the possible arguments.
+<code>ember-showcase</code> allows you do that with an output like the following:</p>
+<!-- BEGIN-SNIPPET intro-usage -->
+
+  <div class="mt-6 mb-4 border border-gray-300 rounded-md overflow-hidden showcase" data-test-first-demo>
+    <div class="p-4 bg-white">
+      
+  <!-- BEGIN-SNIPPET greeting-usage -->
+  <div class="mb-2">
+    The <code class="font-bold">&lt;Greeting @name /&gt;</code> component renders a
+    greeting (optionally uppercase) for the passed in <code class="font-bold">@name</code> argument.
+  </div>
+
+  <div>
+    <label>
+      <input id="ember3" class="ember-checkbox ember-view" type="checkbox">
+      uppercase?
+    </label>
+  </div>
+  <div class="mb-4">
+    <label>
+      Name:
+      <input value="Dr. Tobias Fünke" placeholder="Enter your name" id="ember4" class="ember-text-field ember-view border border-black" type="text">
+    </label>
+  </div>
+
+  <div class="border p-4">
+    Hello <span class="font-bold">Dr. Tobias Fünke</span>!!
+
+  </div>
+  <!-- END-SNIPPET -->
+
+  <div></div>
+
+  <div></div>
+
+  <div></div>
+
+  <div></div>
+
+
+    </div>
+    <div class="bg-prism-tomorrow-bg rounded-b-md">
+      <div class="flex px-4 py-2 border-b border-prism-tomorrow-comment-gray">
+<!---->      </div>
+<!---->    </div>
+  </div>
+
+
+
+<!-- END-SNIPPET -->
 <h2>How to install</h2>
 <p>To install <code>ember-showcase</code> use the regular <code>ember-cli</code>-command to install an addon:</p>
-  <pre id="ember3" class="code-block language-shell-session ember-view"><!----><code class="language-shell-session"><span class="token command"><span class="token shell-symbol important">$</span> <span class="token bash language-bash">ember <span class="token function">install</span> ember-showcase</span></span></code></pre>
+  <pre id="ember5" class="code-block language-shell-session ember-view"><!----><code class="language-shell-session"><span class="token command"><span class="token shell-symbol important">$</span> <span class="token bash language-bash">ember <span class="token function">install</span> ember-showcase</span></span></code></pre>
 
 <h2>How to use</h2>
 <p><code>ember-showcase</code> is an addon that provides you with <span class="underline">component abstractions
@@ -45,7 +100,7 @@ that you can build upon</span> to showcase interactive code-samples in your
 applications.</p>
 <p>This can be useful for <span class="underline">documenting an addon, a styleguide or when writing
 a blog</span>.</p>
-<p><code>ember-showcase</code> comes with <span class="underline">no styling</span> - the
+<p><code>ember-showcase</code> comes with <span class="underline font-bold">no styling</span> - the
 components it provides are not meant to to be used as they come. The bundled
 components of <code>ember-showcase</code> are primitives that you will use to build your
 own component abstraction for displaying interactive code samples that you
@@ -64,7 +119,7 @@ need to build your own interactive code sample component.</p>
 <li><code>snippet</code> - a component that renders a code snippet</li>
 </ul>
 </li>
-<li><code>state </code>- state of the <code>Showcase</code> you can use to build your own code sample
+<li><code>state</code> - state of the <code>Showcase</code> you can use to build your own code sample
 abstraction
 <ul>
 <li><code>activeSnippet</code> - the currently active code snippet of all all the registered
@@ -93,24 +148,48 @@ toggle between to show other developers how the component you are demoing will
 be used in code. Code highlighting is based on
 <a href="https://github.com/shipshapecode/ember-prism">ember-prism</a> if you want to customize the theme used in code snippets please configure <code>ember-prism</code> accordingly.</p>
 <p>This guide is customizing <code>ember-prism</code> in the following way for example:</p>
-  <pre id="ember4" class="code-block language-javascript ember-view"><!----><code class="language-javascript"><span class="token comment">// ember-cli-build.js</span>
-module<span class="token punctuation">.</span><span class="token function-variable function">exports</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">defaults</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">EmberAddon</span><span class="token punctuation">(</span>defaults<span class="token punctuation">,</span> <span class="token punctuation">{</span>
-    <span class="token comment">// ...</span>
-    <span class="token string">"ember-prism"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-      theme<span class="token operator">:</span> <span class="token string">"tomorrow"</span><span class="token punctuation">,</span>
-      components<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"markup"</span><span class="token punctuation">,</span> <span class="token string">"bash"</span><span class="token punctuation">,</span> <span class="token string">"shell-session"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-      plugins<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"line-numbers"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-    <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    <span class="token comment">// ...</span>
-  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
+
+  <div class="mt-6 mb-4 border border-gray-300 rounded-md overflow-hidden showcase">
+    <div>
+      
+  <div></div>
+
+
+    </div>
+    <div class="bg-prism-tomorrow-bg rounded-b-md">
+      <div class="flex px-4 py-2 border-b border-prism-tomorrow-comment-gray">
+<!---->      </div>
+<!---->    </div>
+  </div>
+
+
+
+<h3>Implementing <code>Demo</code></h3>
+<p>And here’s how you would use <code>ember-showcase</code> to implement <code>Demo</code> - you don’t
+need to do more than create your own component wrapper that uses <code>Showcase</code>
+internally - the example uses <a href="https://tailwindcss.com/">tailwindcss</a> for
+styling but you can use whatever CSS authoring method you are comfortable with:</p>
+
+  <div class="mt-6 mb-4 border border-gray-300 rounded-md overflow-hidden showcase">
+    <div>
+      
+  <div></div>
+
+
+    </div>
+    <div class="bg-prism-tomorrow-bg rounded-b-md">
+      <div class="flex px-4 py-2 border-b border-prism-tomorrow-comment-gray">
+<!---->      </div>
+<!---->    </div>
+  </div>
+
+
 
 <h3><code>Demo</code>-Usage</h3>
 <p>Here’s how you will be able to use the <code>Demo</code> component:</p>
 <!-- BEGIN-SNIPPET demo-usage -->
 
-  <div class="mt-6 mb-4 border border-gray-300 rounded-md showcase">
+  <div class="mt-6 mb-4 border border-gray-300 rounded-md overflow-hidden showcase">
     <div class="p-4 bg-white">
       
   <!-- BEGIN-SNIPPET code-snippet -->
@@ -133,48 +212,6 @@ module<span class="token punctuation">.</span><span class="token function-variab
 
 
 <!-- END-SNIPPET -->
-<h3>Implementing <code>Demo</code></h3>
-<p>And here’s how you would use <code>ember-showcase</code> to implement <code>Demo</code> - you don’t
-need to do more than create your own component wrapper that uses <code>Showcase</code>
-internally - the example uses <a href="https://tailwindcss.com/">tailwindcss</a> for
-styling but you can use whatever CSS authoring method you are comfortable with:</p>
-  <pre id="ember5" class="code-block language-html ember-view"><!----><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Showcase</span> <span class="token attr-name">as</span> <span class="token attr-name">|showcase|</span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>mt-6 mb-4 border border-gray-300 rounded-md showcase<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>p-4 bg-white<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-      {{yield (hash
-        ui=(hash
-          useSnippet=showcase.ui.useSnippet
-        )
-      )}}
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>bg-prism-tomorrow-bg rounded-b-md<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>flex px-4 py-2 border-b border-prism-tomorrow-comment-gray<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-        {{#each showcase.state.snippets as |snippet|}}
-          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span>
-            <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span>
-            <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>
-              mr-4 -ml-2 focus:outline-none
-              {{if (eq snippet showcase.state.activeSnippet)
-                <span class="token punctuation">"</span></span><span class="token attr-name">text-gray-300"</span> <span class="token attr-name">"text-prism-tomorrow-comment-gray"</span>
-              <span class="token attr-name">}}</span>
-            <span class="token attr-name">"</span>
-            <span class="token attr-name">{{on</span> <span class="token attr-name">"click"</span> <span class="token attr-name">(fn</span> <span class="token attr-name">showcase.actions.activateSnippet</span> <span class="token attr-name">snippet)}}</span>
-          <span class="token punctuation">></span></span>
-            {{snippet.title}}
-          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
-        {{/each}}
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-      {{#if showcase.state.activeSnippet}}
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>showcase.ui.snippet</span>
-          <span class="token attr-name">@name</span><span class="token attr-value"><span class="token punctuation">=</span>{{showcase.state.activeSnippet.name}}</span>
-          <span class="token attr-name">@language</span><span class="token attr-value"><span class="token punctuation">=</span>{{showcase.state.activeSnippet.language}}</span>
-          <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>m-0 rounded-b-md line-numbers<span class="token punctuation">"</span></span>
-        <span class="token punctuation">/></span></span>
-      {{/if}}
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Showcase</span><span class="token punctuation">></span></span></code></pre>
-
 </div>
 <div class="px-4 py-8 pt-8 mt-12 border-t border-gray-200 lg:py-16">
   <div class="text-base text-gray-500 leading-6 xl:text-center">
@@ -185,8 +222,8 @@ styling but you can use whatever CSS authoring method you are comfortable with:<
           </div>
           <script type="x/boundary" id="fastboot-body-end"></script>
 
-    <script src="/assets/vendor-17647bcc70417ffea36fa99d42c10d54.js" integrity="sha256-gp6pN6PYrVSat1mC8ImQX7GUoAob361XEIbwRYR6s28= sha512-jHKDbFH/Rr9a0hj3rRqhXaEJ+bkiDRUsmvRwOc6fQG/w4jgvgxIftmrJ4fqVKrZxfYGG67kIvz8Dez5xMCbYbw==" ></script>
-    <script src="/assets/dummy-ab3717150d4d105c1472a268dfb58998.js" integrity="sha256-ZOnypYnvi8nd8WRnSBGHHYP0hI9GiG9/3/xy0PL1qFo= sha512-M5vXEQ3oAhg2YdMJOOU0bRglWOzgPoMrzUEC0Nkk5I5AXx/VuSdn9m1iDoHMO61a77apk8WOPC7wB81DMsClcw==" ></script>
+    <script src="/assets/vendor-8d4edee874fe8a1dd2d108b8ea6a7f39.js" integrity="sha256-e8IGk1F2EBQ3eCeEn9M16FOlnvorEJAIY7U31Cx6pc8= sha512-a8K6GSb5eSQaYeMvm7hcZz8aYGb6l41rK+s3AyJWqCoV3lhckuqGEBYl8mjbF4pm8I2yxTaE/zbbLehTQ9O81w==" ></script>
+    <script src="/assets/dummy-b8dcbb775bd8664c9dd34033d2395312.js" integrity="sha256-4Q6SWNWfDOPB1bOsgf7ZKBrESfaoH02sBiq+tM/h0Fw= sha512-sdvBLpi9l2PuscNWfz/IAzWForlymMrj5Y1UvHKJ5xt1cWvpr1O92PEyGRaCoYmZVQ9keWhkZ8tnblc3q1dS9w==" ></script>
 
     
   </body>
