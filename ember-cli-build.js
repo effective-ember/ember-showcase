@@ -1,14 +1,15 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
-"use strict";
+/* eslint-disable @typescript-eslint/no-var-requires */
+'use strict';
 
-const EmberAddon = require("ember-cli/lib/broccoli/ember-addon");
+const EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
 
 module.exports = function (defaults) {
   const app = new EmberAddon(defaults, {
     // Add options here
-    snippetPaths: ["tests/dummy/app/snippets"],
-    snippetSearchPaths: ["tests/dummy"],
-    "markdown-it-templates": {
+    snippetPaths: ['tests/dummy/app/snippets'],
+    snippetSearchPaths: ['tests/dummy'],
+    'markdown-it-templates': {
       options: {
         linkify: true,
         html: true,
@@ -26,24 +27,24 @@ module.exports = function (defaults) {
       compile: {
         plugins: [
           {
-            module: require("postcss-import"),
+            module: require('postcss-import'),
             options: {
-              path: ["node_modules"],
+              path: ['node_modules'],
             },
           },
-          require("tailwindcss")("./tailwind.config.js"),
+          require('tailwindcss')('./tailwind.config.js'),
         ],
       },
     },
 
-    "ember-prism": {
-      theme: "tomorrow",
-      components: ["markup", "bash", "shell-session"],
-      plugins: ["line-numbers"],
+    'ember-prism': {
+      theme: 'tomorrow',
+      components: ['markup', 'bash', 'shell-session'],
+      plugins: ['line-numbers'],
     },
 
     prember: {
-      urls: ["/"],
+      urls: ['/'],
     },
   });
 

@@ -1,4 +1,4 @@
-import CodeBlock from "ember-prism/components/code-block";
+import CodeBlock from 'ember-prism/components/code-block';
 
 export default class CodeBlockComponent extends CodeBlock {
   didRender(...args) {
@@ -10,7 +10,7 @@ export default class CodeBlockComponent extends CodeBlock {
     // line numbers are already shown
     // https://github.com/PrismJS/prism/blob/v1.19.0/plugins/line-numbers/prism-line-numbers.js#L82-L85
     this.getElement()
-      .querySelectorAll(".line-numbers-rows")
+      .querySelectorAll('.line-numbers-rows')
       .forEach((e) => e.parentNode.removeChild(e));
 
     return super.didRender(...args);
