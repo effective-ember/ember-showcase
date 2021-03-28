@@ -5679,14 +5679,14 @@ ember-cli-lodash-subset@2.0.1, ember-cli-lodash-subset@^2.0.1:
   resolved "https://registry.yarnpkg.com/ember-cli-lodash-subset/-/ember-cli-lodash-subset-2.0.1.tgz#20cb68a790fe0fde2488ddfd8efbb7df6fe766f2"
   integrity sha1-IMtop5D+D94kiN39jvu332/nZvI=
 
-ember-cli-markdown-it-templates@^0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/ember-cli-markdown-it-templates/-/ember-cli-markdown-it-templates-0.0.2.tgz#4b75beb9a8ead908bf5cc043ac8749a022bff97b"
-  integrity sha512-Gt4VeVhfYeUMLxD4RusUxlCG9zvP8Ucbn8X4HobxfzXi6usoRHWokm3o2mKPkRSp6mio8YPyG706EgJdyu7QEg==
+ember-cli-markdown-it-templates@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/ember-cli-markdown-it-templates/-/ember-cli-markdown-it-templates-0.0.3.tgz#68965b39cbf50a5ae3fb3e5c9103a50bbdf7e66e"
+  integrity sha512-0iO3sGB4A9M+cCSwLbf25kLuMxQ2TkhHmMXEQQd+MHaTc4Fx/+KM+SCyyQYOMHn3E9O93iFewJn01TrAybaS3w==
   dependencies:
     broccoli-stew "^3.0.0"
-    ember-cli-babel "^7.17.2"
-    ember-cli-htmlbars "^4.2.2"
+    ember-cli-babel "^7.19.0"
+    ember-cli-htmlbars "^4.3.1"
     markdown-it-compiler "^0.1.0"
     markdown-it-ember "^0.0.2"
 
