@@ -77,6 +77,14 @@ module.exports = {
         browser: false,
         node: true,
       },
+      rules: Object.assign(
+        {},
+        require('eslint-plugin-node').configs.recommended.rules,
+        {
+          '@typescript-eslint/no-var-requires': 'off',
+          // add your custom rules and overrides for node files here
+        }
+      ),
       plugins: ['node'],
       extends: ['plugin:node/recommended'],
     },
