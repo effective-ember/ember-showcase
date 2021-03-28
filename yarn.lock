@@ -7013,10 +7013,10 @@ ember-cli-deploy@^1.0.2:
     rsvp "^3.3.3"
     silent-error "^1.0.0"
 
-ember-cli-fastboot@^2.2.2:
-  version "2.2.2"
-  resolved "https://registry.yarnpkg.com/ember-cli-fastboot/-/ember-cli-fastboot-2.2.2.tgz#db7fdab8b5b37bb2ae2541790701527231029c25"
-  integrity sha512-j3pCxBRZdZIRVtfzbQ9TqkR0LLmnxa4Isjns9HD/ZnO7u8uzWfYmncqqJbgIwcWHHG8v6x8opNeYnx99WQhy9g==
+ember-cli-fastboot@^2.2.3:
+  version "2.2.3"
+  resolved "https://registry.yarnpkg.com/ember-cli-fastboot/-/ember-cli-fastboot-2.2.3.tgz#d32eba948b2790ec4b5429ff759a8dee932c1e55"
+  integrity sha512-RdKzTOXHi59VW6a9RB0muCQd15BmY95pWkQ9eLslyeLR38/Uh1EVP+kgWxzJTxODywmMJ9SWW2HPpvxxLDfCEw==
   dependencies:
     broccoli-concat "^3.7.1"
     broccoli-file-creator "^2.1.1"
@@ -12806,10 +12806,10 @@ prelude-ls@~1.1.2:
   resolved "https://registry.yarnpkg.com/prelude-ls/-/prelude-ls-1.1.2.tgz#21932a549f5e52ffd9a827f570e04be62a97da54"
   integrity sha1-IZMqVJ9eUv/ZqCf1cOBL5iqX2lQ=
 
-prember@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/prember/-/prember-1.0.4.tgz#1218369e5d3baef0ce1a9f05341476c9ae4b30dc"
-  integrity sha512-eqY65zIimju84/rD4hGtKALtH0vZwc9uhNHO5yHm4QvCUgLdTcB++mplFRUMnfJPnIa3bLUyac2tBTFxYp37WA==
+prember@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/prember/-/prember-1.0.5.tgz#1f6644fb08a5b6902e2ec489f26086672f81a26a"
+  integrity sha512-+Yf6vJhcmig8rMDabToRk1Q2x4g+yKXiZJPOD3XZ5fvknQuM/LsXM+BHXVqGQwgBuXI7353wesoZBC1HXpWdYA==
   dependencies:
     broccoli-debug "^0.6.3"
     broccoli-merge-trees "^2.0.0"
