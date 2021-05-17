@@ -1,4 +1,4 @@
-ember-showcase [![Build Status](https://travis-ci.org/effective-ember/ember-showcase.svg?branch=master)](https://travis-ci.org/effective-ember/ember-showcase)
+ember-showcase [![CI](https://github.com/effective-ember/ember-showcase/actions/workflows/ci.yml/badge.svg)](https://github.com/effective-ember/ember-showcase/actions/workflows/ci.yml)
 ==============================================================================
 
 A set of primitives to showcase interactive code examples
