@@ -15,7 +15,6 @@ module.exports = {
     'eslint:recommended',
     'plugin:ember/recommended',
     'plugin:@typescript-eslint/recommended',
-    'prettier/@typescript-eslint',
     'plugin:prettier/recommended',
   ],
   env: {
@@ -50,7 +49,6 @@ module.exports = {
       },
     ],
   },
-  rules: {},
   overrides: [
     // node files
     {
