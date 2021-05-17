@@ -1,14 +1,18 @@
-{{yield (hash
-  ui=(hash
-    useSnippet=(component this.useSnippetComponent registerSnippet=this.registerSnippet)
-    snippet=(component this.snippetComponent registerSnippet=this.registerSnippet)
+{{yield
+  (hash
+    ui=(hash
+      useSnippet=(component
+        (ensure-safe-component this.useSnippetComponent)
+        registerSnippet=this.registerSnippet
+      )
+      snippet=(component
+        (ensure-safe-component this.snippetComponent)
+        registerSnippet=this.registerSnippet
+      )
+    )
+    state=(hash activeSnippet=this._activeSnippet snippets=this.snippets)
+    actions=(hash
+      registerSnippet=this.registerSnippet activateSnippet=this.activateSnippet
+    )
   )
-  state=(hash
-    activeSnippet=this._activeSnippet
-    snippets=this.snippets
-  )
-  actions=(hash
-    registerSnippet=this.registerSnippet
-    activateSnippet=this.activateSnippet
-  )
-)}}
+}}
