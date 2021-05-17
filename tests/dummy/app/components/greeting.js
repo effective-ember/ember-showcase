@@ -1,10 +1,10 @@
-import Component from "@glimmer/component";
+import Component from '@glimmer/component';
 
 // BEGIN-SNIPPET greeting-component
 export default class Greeting extends Component {
   get name() {
     if (!this.args.name) {
-      return "<no @name provided>";
+      return '<no @name provided>';
     }
 
     if (this.args.uppercase) {

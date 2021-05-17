@@ -1,1 +1,1 @@
-export { default } from "ember-showcase/components/snippet";
+export { default } from 'ember-showcase/components/snippet';

@@ -1,11 +1,11 @@
 /* eslint-env node */
-"use strict";
+'use strict';
 
-module.exports = function (deployTarget) {
+module.exports = function (/* deployTarget */) {
   const ENV = {
     build: {},
     git: {
-      commitMessage: "chore: deploy %@",
+      commitMessage: 'chore: deploy %@',
     },
   };
 

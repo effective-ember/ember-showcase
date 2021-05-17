@@ -1,29 +1,29 @@
-import { render, click } from "@ember/test-helpers";
-import { setupRenderingTest } from "ember-qunit";
-import { module, test } from "qunit";
+import { render, click } from '@ember/test-helpers';
+import { setupRenderingTest } from 'ember-qunit';
+import { module, test } from 'qunit';
 
-import { hbs } from "ember-cli-htmlbars";
+import { hbs } from 'ember-cli-htmlbars';
 
-module("Integration | Component | showcase usage", function (hooks) {
+module('Integration | Component | showcase usage', function (hooks) {
   setupRenderingTest(hooks);
 
-  module("`Showcase` is a functional component that", function () {
-    test("renders the block it is passed", async function (assert) {
+  module('`Showcase` is a functional component that', function () {
+    test('renders the block it is passed', async function (assert) {
       await render(hbs`
         <Showcase>
           <div data-test-example></div>
         </Showcase>
       `);
 
-      assert.dom("[data-test-example]").exists("example block is rendered");
+      assert.dom('[data-test-example]').exists('example block is rendered');
     });
 
-    module("yields", function () {
-      module("ui.", function () {
+    module('yields', function () {
+      module('ui.', function () {
         module(
-          "`useSnippet`- a component that can be used to register snippets on a `Showcase`",
+          '`useSnippet`- a component that can be used to register snippets on a `Showcase`',
           function () {
-            test("the first snippet will be the active by default", async function (assert) {
+            test('the first snippet will be the active by default', async function (assert) {
               await render(hbs`
               <Showcase
                 as |showcase|
@@ -41,53 +41,53 @@ module("Integration | Component | showcase usage", function (hooks) {
 
               assert
                 .dom('[data-test-snippet="snippet-a.js"]')
-                .exists("Snippet a is active");
+                .exists('Snippet a is active');
 
               assert
                 .dom('[data-test-snippet="snippet-b.js"]')
-                .doesNotExist("Snippet b is not active");
+                .doesNotExist('Snippet b is not active');
             });
           }
         );
 
         module(
-          "`snippet` - a component that can be used to display a code sample",
+          '`snippet` - a component that can be used to display a code sample',
           function () {
-            test("expects a name to be passed", async function (assert) {
+            test('expects a name to be passed', async function (assert) {
               await render(hbs`
               <Showcase as |showcase|>
                 <showcase.ui.snippet @name="snippet-a.js" />
               </Showcase>
             `);
 
-              assert.dom("code").exists("a code block is rendered");
+              assert.dom('code').exists('a code block is rendered');
 
-              assert.dom("code").hasText(`const a = "a"; console.log(a);`);
+              assert.dom('code').hasText(`const a = "a"; console.log(a);`);
 
               assert
-                .dom("code")
+                .dom('code')
                 .hasClass(
-                  "language-javascript",
-                  "snippet autodetects a snippets language"
+                  'language-javascript',
+                  'snippet autodetects a snippets language'
                 );
             });
 
-            test("language can be overriden", async function (assert) {
+            test('language can be overriden', async function (assert) {
               await render(hbs`
               <Showcase as |showcase|>
                 <showcase.ui.snippet @name="snippet-a.js" @language="html" />
               </Showcase>
             `);
 
-              assert.dom("code").exists("a code block is rendered");
-              assert.dom("code").hasClass("language-html");
+              assert.dom('code').exists('a code block is rendered');
+              assert.dom('code').hasClass('language-html');
             });
           }
         );
       });
 
-      module("actions.", function () {
-        test("`activateSnippet` can be used to activate a snippet", async function (assert) {
+      module('actions.', function () {
+        test('`activateSnippet` can be used to activate a snippet', async function (assert) {
           await render(hbs`
             <Showcase
               as |showcase|
@@ -116,16 +116,16 @@ module("Integration | Component | showcase usage", function (hooks) {
 
           assert
             .dom('[data-test-snippet="snippet-a.js"]')
-            .exists("Snippet a is active");
+            .exists('Snippet a is active');
 
           await click('[data-test-snippet-button="snippet-b.js"]');
 
           assert
             .dom('[data-test-snippet="snippet-b.js"]')
-            .exists("Snippet b is active now");
+            .exists('Snippet b is active now');
         });
 
-        test("`registerSnippet` can be used to register a snippet", async function (assert) {
+        test('`registerSnippet` can be used to register a snippet', async function (assert) {
           await render(hbs`
             <Showcase
               as |showcase|
@@ -145,17 +145,17 @@ module("Integration | Component | showcase usage", function (hooks) {
           `);
 
           assert
-            .dom("[data-test-snippet]")
+            .dom('[data-test-snippet]')
             .doesNotExist(
-              "no snippet is rendered without registering a snippet"
+              'no snippet is rendered without registering a snippet'
             );
 
-          await click("[data-test-register-snippet-button]");
+          await click('[data-test-register-snippet-button]');
 
           assert
-            .dom("[data-test-snippet]")
+            .dom('[data-test-snippet]')
             .exists(
-              "after registering snippets are accessible via `state.snippets`"
+              'after registering snippets are accessible via `state.snippets`'
             );
         });
       });
