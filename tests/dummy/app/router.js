@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
-import EmberRouter from "@ember/routing/router";
-
-import config from "./config/environment";
+import EmberRouter from '@ember/routing/router';
+import config from 'dummy/config/environment';
 
 export default class Router extends EmberRouter {
   location = config.locationType;

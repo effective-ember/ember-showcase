@@ -51,7 +51,7 @@ and want to showcase its usage by demonstrating the possible arguments.
     </label>
   </div>
 
-  <div class="border p-4">
+  <div class="p-4 border">
     <Greeting @uppercase={{this.uppercase}} @name={{this.name}} />
   </div>
   <!-- END-SNIPPET -->
