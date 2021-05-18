@@ -1,3 +1,11 @@
+# [0.2.0](https://github.com/effective-ember/ember-showcase/compare/0.1.0...0.2.0) (2021-05-18)
+
+
+### Features
+
+* add github actions CI workflow ([8c23e43](https://github.com/effective-ember/ember-showcase/commit/8c23e430796d6ccf6db2651c26f6ff5f7a6a6b65))
+* embroider safe component invocations snippets ([abd5d5d](https://github.com/effective-ember/ember-showcase/commit/abd5d5db90bd4d1ac236ecdc11a5b6365123523a))
+
 # 0.1.0 (2020-05-18)
 
 
